@@ -1,13 +1,13 @@
 ---
 
    - name: install OpenHPC base
-     yum: name="@ohpc-base" state=present
+     yum: name="ohpc-base" state=present
 
    - name: install OpenHPC warewulf
-     yum: name="@ohpc-warewulf" state=present
+     yum: name="ohpc-warewulf" state=present
 
    - name: install OpenHPC slurm server
-     yum: name="@ohpc-slurm-server" state=present
+     yum: name="ohpc-slurm-server" state=present
 
    - name: yum update
      yum: name=* state=latest update_cache=yes

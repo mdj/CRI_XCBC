@@ -44,8 +44,11 @@
      command: yum -y --installroot={{ compute_chroot_loc }} install chrony kernel lmod-ohpc grub2 freeipmi ipmitool
 #" for vim
 
+#   - name: yum install ohpc base into image
+#     command: yum -y --installroot={{ compute_chroot_loc }} install ohpc-base-compute
+
    - name: yum install slurm client into image
-     command: yum -y --installroot={{ compute_chroot_loc }} groupinstall ohpc-slurm-client
+     command: yum -y --installroot={{ compute_chroot_loc }} install ohpc-slurm-client
 #" for vim
 
    - name: copy ssh keys over
